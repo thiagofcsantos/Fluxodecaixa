@@ -8,7 +8,7 @@ Um comerciante precisa controlar o seu fluxo de caixa diário com os lançamento
 •	Serviço do consolidado diário
 
 2.	Diagramas de Modelagem de Dados e Arquitetura
- 
+ <img src="db.png">
 Para atender os requisitos inciais do projetos vamos utilizar apenas a tabela movimentação.
 Essa tabela ficará encarregada de guardar as informações de entrada e saída do fluxo de caixa.
 Incialmente dentro dessa aplicação vamos utilizar um banco de dados SQLite, trata-se de um banco de dados compacto, leve e de fácil manutenção.
