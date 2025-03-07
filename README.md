@@ -14,8 +14,6 @@ Essa tabela ficará encarregada de guardar as informações de entrada e saída 
 Incialmente dentro dessa aplicação vamos utilizar um banco de dados SQLite, trata-se de um banco de dados compacto, leve e de fácil manutenção.
 Podemos realizar uma migração para um banco de dados em MariaDB dentro de um servidor AWS.
 
-
-
 3.	Arquitetura resumida
 Baseando em uma solução simples, precisamos iniciar o servidor de API que podemos hospedar em um servidor AWS, o servidor de API será o script app.py, com a aplicação iniciada devemos enviar um post com os dados de entrada. A URL de entrada será http://127.0.0.1:5000/movimentacao
 {
@@ -35,6 +33,16 @@ Após será solicitado o valor que sempre será um numero inteiro e maior que 0.
 Após a entrada dos dados será feita a requisição da API para gravar os dados no banco de dados.
 O usuário será perguntado será ele desejar inserir novos dados, caso a resposta seja sim o processo será reiniciado.
 Caso a resposta seja não o processo será encerrado.
+
+Estimativas de custos
+Item	- Opcao	- Custo
+Servidor (EC2 - AWS)	- t3.micro - 	$10/mês
+Banco de Dados (RDS - AWS) -	PostgreSQL - db.t3.micro -	$15/mês
+Kafka (MSK - AWS)	- Cluster pequeno -	$30/mês
+Monitoramento (Grafana Cloud)	- Free/Pago - 	$0 a $20/mês
+Power Bi	- Free/Pago - 	$0 a $10/mes
+Docker	- Self-hosted -	$0
+Total estimado: -	$55 a $85/mês
 
 
 4.	PONTOS POSITIVOS DA APLICACAO.
@@ -81,6 +89,22 @@ Assim será aberto a opção de Conexao OBDC. Devemos selecionar a opção de co
  
 Após essa configuração podemos fechar o power query e atualizar os dados do power bi.
 Pronto nosso relatório será atualizado com os dados da aplicação e será exibido os dados de entrada do fluxo de caixa.
+
+7. Como rodar o projeto.
+
+   Ter o pyhton instalado na maquina. instalar a versao do python 3.12
+   apos a instalacao do python é necessario abrir o projeto, acessar o terminar do editor de Texto VSCode.
+   executar o comando
+   pip install -r requirements.txt
+
+   para instalacao de todas as bibliotecas necesarias para executar o projeto.
+   apos a instalacao do projeto é necessario iniciar o serviço app.py.
+   executar o comando
+   python app.py
+
+   iniciar o serviço do cliente
+   executar o comando
+   python cliente.py
 
 PROJETO
 FLUXO DE CAIXA.
