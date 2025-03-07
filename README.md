@@ -85,7 +85,7 @@ Dentro do power Query teremos uma visão geral dos dados importados do SQLite, p
  
 Assim será aberto a opção de Conexao OBDC. Devemos selecionar a opção de conexão que acabamos de configurar.
 
- <img src="obdcdrive.png">
+ <img src="conexaoobdc.png">
  
 Após essa configuração podemos fechar o power query e atualizar os dados do power bi.
 Pronto nosso relatório será atualizado com os dados da aplicação e será exibido os dados de entrada do fluxo de caixa.
